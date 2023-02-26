@@ -25,7 +25,7 @@ public class Consumer extends Thread{
 		int batch = new Random().nextInt(10);
 		if (!Storage.storage.removeProduct(batch, name)){
 			try {Thread.sleep(2000);} catch (InterruptedException ex) {}
-			buyProduct();
+			 buyProduct();
 		}else {
 			totalBuy+=batch;
 			System.out.println(name + ": Всего купил " + totalBuy + " товаров.");
